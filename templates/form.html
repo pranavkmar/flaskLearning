@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Form for Data{%endblock%}
+{% block content %}
+<!-- In General the content block of parents get overridden by the child block, so use {{super()}} to include the base template content -->
+{{ super() }}
+<h1>Please Fill the form</h1>
+<form action="/form" method="POST">
+    <label>User Name: </label> <input type="text" name="uname">
+    <label>Location</label> <input type="text" name="loc">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
