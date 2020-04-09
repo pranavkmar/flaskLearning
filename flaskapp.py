@@ -94,7 +94,7 @@ def viewDB():
     results = cur.fetchall()
     return '''<h1>The ID is {},The Name is {},
     The location is {}.</h1>
-    '''.format(results[1]['id'], results[1]['name'], results[1]['location'])
+    '''.format(results[2]['id'], results[2]['name'], results[2]['location'])
 
 
 if __name__ == "__main__":
