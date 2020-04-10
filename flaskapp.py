@@ -6,10 +6,12 @@ app.config['SECRET_KEY'] = 'thisisasecret'
 
 
 def connect_db():
-    sql = sqlite3.connect('/home/ubuntu/flask-app/data.db')
+    # give the path to connect to the db in the sqlite3.connect()
+    # sql = sqlite3.connect('/home/ubuntu/flask-app/data.db')
+    sql = sqlite3.connect('/mnt/c/Users/prana/PycharmProjects/flaskLearning/data.db')
     sql.row_factory = sqlite3.Row
     return sql
-
+# C:\Users\prana\PycharmProjects\flaskLearning\data.db
 
 def get_db():
     if not hasattr(g, 'sqlite3'):
